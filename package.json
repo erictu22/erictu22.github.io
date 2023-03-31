@@ -1,5 +1,5 @@
 {
-  "name": "webclient",
+  "name": "erictu22.github.io",
   "homepage": "https://erictu22.github.io",
   "version": "0.1.0",
   "private": true,
@@ -11,12 +11,10 @@
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router": "^6.10.0",
-    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.9",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -25,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build", 
-    "deploy": "gh-pages -d build"
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -b main -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,9 +43,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.26",
-    "gh-pages": "^5.0.0"
   }
 }

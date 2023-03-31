@@ -1,13 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
-import { Home } from './pages/Home';
-import { Blog } from './pages/Blog';
-import { Projects } from './pages/Projects';
-import { H2 } from './components/Text';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <H2> This site is under construction </H2>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
