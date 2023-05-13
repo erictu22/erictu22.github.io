@@ -1,17 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Home} from './pages/Home'
+import { Layout } from './Layout';
+import { Convo } from './pages/Convo';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This site is under construction.
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route index element={<Home />} />
+          <Route path="tryconvo" element={<Convo />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
