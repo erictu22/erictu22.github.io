@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { H2, H3 } from "../components/typography";
 
 export function Convo() {
+  console.log('yo')
   return (
     <div
       style={{
