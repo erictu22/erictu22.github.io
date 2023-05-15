@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Card, Theme } from "../components/cards";
 import CircleImage from "../components/circleImage";
 import { FlexColumn, FlexRow } from "../components/flex";
 import { GradientSpan, H2, H3, P, Title } from "../components/typography";
@@ -58,9 +59,12 @@ const HeaderSection = () => {
 };
 
 const ExperienceSection = () => {
-
+  const cardTheme : Theme = 'dark'
   return <SectionWrapper background='white' color='black' spacing={60}>
     <H2>Experience</H2>
+    <FlexRow>
+      <Card theme={cardTheme}>Hello</Card>
+    </FlexRow>
   </SectionWrapper>
 };
 
