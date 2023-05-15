@@ -12,15 +12,17 @@ export function Home() {
 }
 
 const HeaderSection = () => {
-  const headerSpacing = 120;
+  const headerSpacing = 60;
   const isMobileLayout = useIsMobileLayout();
 
   return (
-    <FlexRow
+    <FlexColumn
       style={{
-        justifyContent: "center",
-        marginTop: headerSpacing,
-        marginBottom: headerSpacing,
+        alignItems: "center",
+        paddingTop: headerSpacing,
+        paddingBottom: headerSpacing,
+        backgroundColor: 'black',
+        color: 'white'
       }}
     >
       <FlexRow>
@@ -28,19 +30,24 @@ const HeaderSection = () => {
           <CircleImage
             src="./profile_square.png"
             alt="A picture of Eric Tu"
-            size={180}
+            size={160}
           />
         )}
 
-        <FlexColumn style={{ marginLeft: 60, justifyContent: "center" }}>
-          <Title style={{ textAlign: "start", marginBottom: 12 }}>
-            Hi! I'm Eric 👋
+        <FlexColumn style={{ marginLeft: isMobileLayout ? 0 : 60, justifyContent: "center"}}>
+          <Title style={{ textAlign: 'start', marginBottom: 24 }}>
+            Hi, I'm Eric 👋
           </Title>
-          <H3 style={{ maxWidth: 340, textAlign: "start" }}>
-            a Front-End & Full-Stack Engineer based in NYC 🗽
+          <H3 style={{ maxWidth: isMobileLayout ? 340 : 368, textAlign: "start" }}>
+            a Front-End & Full-Stack Engineer based in Brooklyn, NYC 🗽
           </H3>
         </FlexColumn>
       </FlexRow>
-    </FlexRow>
+
+      <FlexRow style={{marginTop: headerSpacing, width: isMobileLayout ? 280 : undefined}}>
+        <P>This website was built using React.js and CSS styled-components</P>
+      </FlexRow>
+      
+    </FlexColumn>
   );
 };
