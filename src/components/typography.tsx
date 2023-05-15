@@ -3,19 +3,21 @@ import styled from "styled-components";
 interface TextProps {
     readonly align? : 'start' | 'center';
     readonly bold? : boolean;
+    readonly color? : string;
 }
 
 export const Title = styled.h1<TextProps>`
   margin: 0;
   font-size: 56px;
   text-align: ${({align}) => align};
+  color: ${({color}) => color};
 `;
 
 export const H2 = styled.h2<TextProps>`
   margin: 0;
   font-size: 40px;
   text-align: ${({align}) => align};
-
+  color: ${({color}) => color};
 `;
 
 export const H3 = styled.h3<TextProps>`
@@ -24,6 +26,7 @@ export const H3 = styled.h3<TextProps>`
   font-weight: 600;
   text-align: ${({align}) => align};
   line-height: 36px;
+  color: ${({color}) => color};
 `;
 
 export const H4 = styled.h3<TextProps>`
@@ -31,6 +34,7 @@ export const H4 = styled.h3<TextProps>`
   font-size: 20px;
   font-weight: 600;
   text-align: ${({align}) => align};
+  color: ${({color}) => color};
 `;
 
 export const P = styled.p<TextProps>`

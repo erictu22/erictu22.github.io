@@ -15,7 +15,7 @@ const CardWrapper = styled.div<{ theme?: Theme , width?: number}>`
   padding: 24px;
   margin: 4px;
   background-color: ${({ theme }) => (theme === "dark" ? "#303045" : "white")};
-  color: ${({ theme }) => (theme === "dark" ? "white" : "black")};
+  color: ${({ theme }) => (theme === "dark" ? "white" : "#303045")};
   border-radius: 12px;
   width: ${({width}) => width}px;
 `;

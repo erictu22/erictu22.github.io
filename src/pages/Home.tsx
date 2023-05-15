@@ -11,6 +11,7 @@ export function Home() {
       <HeaderSection />
       <ExperienceSection />
       <ProjectSection/>
+      <WorkWithMeSection/>
     </div>
   );
 }
@@ -20,7 +21,7 @@ const HeaderSection = () => {
   const isMobileLayout = useIsMobileLayout();
 
   return (
-    <SectionWrapper background="black" color="white" spacing={headerSpacing}>
+    <SectionWrapper theme='dark' spacing={headerSpacing}>
       <FlexRow>
         {isMobileLayout ? null : (
           <CircleImage
@@ -64,7 +65,7 @@ const ExperienceSection = () => {
   const cardTheme: Theme = "dark";
   const isMobileLayout = useIsMobileLayout();
   return (
-    <SectionWrapper background="white" color="black" spacing={spacing}>
+    <SectionWrapper theme='light' spacing={spacing}>
       <H2>Experience</H2>
       <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
         <FlexRow style={{ marginTop: spacing / 2 }} wrap={isMobileLayout}>
@@ -120,7 +121,7 @@ const ProjectSection = () => {
   const isMobileLayout = useIsMobileLayout();
 
   return (
-    <SectionWrapper background="black" color="white" spacing={spacing}>
+    <SectionWrapper theme='dark' spacing={spacing}>
       <H2>Projects</H2>
       <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
         <FlexRow style={{ marginTop: spacing / 2 , overflow: 'auto'}} wrap={isMobileLayout}>
@@ -150,10 +151,16 @@ const ProjectSection = () => {
   );
 };
 
+const WorkWithMeSection = () => {
+  const spacing = 120;
+  return <SectionWrapper theme='light' spacing={spacing}>
+    <H2>Let's connect!</H2>
+  </SectionWrapper>
+}
+
 const SectionWrapper: React.FC<{
   children?: ReactNode;
-  background: string;
-  color: string;
+  theme: Theme;
   spacing: number;
 }> = (props) => {
   return (
@@ -162,8 +169,8 @@ const SectionWrapper: React.FC<{
         alignItems: "center",
         paddingTop: props.spacing,
         paddingBottom: props.spacing,
-        backgroundColor: props.background,
-        color: props.color,
+        backgroundColor: props.theme === 'light' ? 'white' : '#303045',
+        color: props.theme === 'light' ? '#303045' : 'white'
       }}
     >
       {props.children}
