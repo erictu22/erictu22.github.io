@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Card, Theme } from "../components/cards";
 import CircleImage from "../components/circleImage";
 import { FlexColumn, FlexRow } from "../components/flex";
+import { Socials } from "../components/socials";
 import { GradientSpan, H2, H3, H4, P, Title } from "../components/typography";
 import { useIsMobileLayout } from "../hooks/useIsMobileLayout";
 
@@ -154,7 +155,8 @@ const ProjectSection = () => {
 const WorkWithMeSection = () => {
   const spacing = 120;
   return <SectionWrapper theme='light' spacing={spacing}>
-    <H2>Let's connect!</H2>
+    <H2 style={{marginBottom: 40}}>Let's connect!</H2>
+    <Socials/>
   </SectionWrapper>
 }
 
