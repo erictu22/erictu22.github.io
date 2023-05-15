@@ -12,9 +12,10 @@ export const Card: React.FC<{
 };
 
 const CardWrapper = styled.div<{ theme?: Theme , width?: number}>`
-  padding: 48px;
+  padding: 24px;
+  margin: 4px;
   background-color: ${({ theme }) => (theme === "dark" ? "#303045" : "white")};
   color: ${({ theme }) => (theme === "dark" ? "white" : "black")};
   border-radius: 12px;
-  width: ${({width}) => width};
+  width: ${({width}) => width}px;
 `;
