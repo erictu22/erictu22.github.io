@@ -10,12 +10,13 @@ export function Home() {
     <div className="App">
       <HeaderSection />
       <ExperienceSection />
+      <ProjectSection/>
     </div>
   );
 }
 
 const HeaderSection = () => {
-  const headerSpacing = 80;
+  const headerSpacing = 120;
   const isMobileLayout = useIsMobileLayout();
 
   return (
@@ -59,13 +60,14 @@ const HeaderSection = () => {
 };
 
 const ExperienceSection = () => {
-  const spacing = 80;
+  const spacing = 120;
   const cardTheme: Theme = "dark";
+  const isMobileLayout = useIsMobileLayout();
   return (
     <SectionWrapper background="white" color="black" spacing={spacing}>
       <H2>Experience</H2>
-      <FlexColumn style={{ width: 700 }}>
-        <FlexRow style={{ marginTop: spacing / 2 }}>
+      <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
+        <FlexRow style={{ marginTop: spacing / 2 }} wrap={isMobileLayout}>
           <Card theme={cardTheme}>
             <H3 align="start">Convo</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
@@ -87,7 +89,7 @@ const ExperienceSection = () => {
             </P>
           </Card>
         </FlexRow>
-        <FlexRow>
+        <FlexRow wrap={isMobileLayout}>
         <Card theme={cardTheme}>
             <H3 align="start">DMI</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
@@ -103,8 +105,43 @@ const ExperienceSection = () => {
               Software Engineer Intern
             </P>
             <P align="start">
-              Developed memory back-up drivers that are used in the Boeing 777x
-              today
+              Developed memory back-up drivers used in the Boeing 777x
+            </P>
+          </Card>
+        </FlexRow>
+      </FlexColumn>
+    </SectionWrapper>
+  );
+};
+
+const ProjectSection = () => {
+  const spacing = 70;
+  const cardTheme: Theme = "light";
+  const isMobileLayout = useIsMobileLayout();
+
+  return (
+    <SectionWrapper background="black" color="white" spacing={spacing}>
+      <H2>Projects</H2>
+      <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
+        <FlexRow style={{ marginTop: spacing / 2 , overflow: 'auto'}} wrap={isMobileLayout}>
+          <Card theme={cardTheme}>
+            <H3 align="start">Automated Video Editor</H3>
+            <P align="start">
+              a suite of Python scripts that uses image recognition to edit YouTube videos
+            </P>
+          </Card>
+          <Card theme={cardTheme}>
+            <H3 align="start">PictoJump</H3>
+            <P align="start">
+              an iOS mobile game that turns your phone's photo library into a platformer game
+            </P>
+          </Card>
+        </FlexRow>
+        <FlexRow wrap={isMobileLayout}>
+        <Card theme={cardTheme}>
+            <H3 align="start">Puppet.io</H3>
+            <P align="start">
+              an image recognition game that won the 2021 MakeHarvard Hack-a-thon
             </P>
           </Card>
         </FlexRow>
