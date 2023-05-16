@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import { Card, Theme } from "../components/cards";
 import CircleImage from "../components/circleImage";
 import { FlexColumn, FlexRow } from "../components/flex";
@@ -20,7 +20,6 @@ export function Home() {
 const HeaderSection = () => {
   const headerSpacing = 120;
   const isMobileLayout = useIsMobileLayout();
-
   return (
     <SectionWrapper theme='dark' spacing={headerSpacing}>
       <FlexRow>
@@ -55,7 +54,7 @@ const HeaderSection = () => {
           width: isMobileLayout ? 280 : undefined,
         }}
       >
-        <P>This page was built using <LinkSpan url='https://github.com/erictu22/erictu22.github.io'>React.js and CSS styled-components</LinkSpan></P>
+        <P>This page was built <LinkSpan url='https://github.com/erictu22/erictu22.github.io'>from scratch</LinkSpan> using React.js</P>
       </FlexRow>
     </SectionWrapper>
   );

@@ -7,7 +7,7 @@ export const lightGradient =
 export const darkGradient =
   "linear-gradient(to right, #336699 0%, #66ccff 100%)";
 export const linkGradient =
-  "linear-gradient(to right, #87CEEB 0%, #ADD8E6 100%)";
+  "linear-gradient(to right, #00BFFF 0%, #00FFFF 100%)";
 interface TextProps {
   readonly align?: "start" | "center";
   readonly bold?: boolean;
@@ -79,11 +79,14 @@ export const LinkSpan: React.FC<{ children?: ReactNode; url: string }> = ({
   url,
 }) => {
   return (
-    <ThemedGradientSpan
-      theme="dark"
+    <GradientSpan
+      gradient={linkGradient}
       style={{ cursor: "pointer" }}
+      onClick={() => {
+        window.open(url)
+      }}
     >
       {children}
-    </ThemedGradientSpan>
+    </GradientSpan>
   );
 };
