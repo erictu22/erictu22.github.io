@@ -3,7 +3,7 @@ import { Card, Theme } from "../components/cards";
 import CircleImage from "../components/circleImage";
 import { FlexColumn, FlexRow } from "../components/flex";
 import { Socials } from "../components/socials";
-import { GradientSpan, H2, H3, H4, P, Title } from "../components/typography";
+import { ThemedGradientSpan, H2, H3, H4, LinkSpan, P, Title } from "../components/typography";
 import { useIsMobileLayout } from "../hooks/useIsMobileLayout";
 
 export function Home() {
@@ -43,7 +43,7 @@ const HeaderSection = () => {
           <H3
             style={{ maxWidth: isMobileLayout ? 340 : 368, textAlign: "start" }}
           >
-            a <GradientSpan>Front-End & Full-Stack Engineer</GradientSpan> based
+            a <ThemedGradientSpan theme='light'>Front-End & Full-Stack Engineer</ThemedGradientSpan> based
             in Brooklyn, NYC 🗽
           </H3>
         </FlexColumn>
@@ -55,7 +55,7 @@ const HeaderSection = () => {
           width: isMobileLayout ? 280 : undefined,
         }}
       >
-        <P>This page was built using React.js and CSS styled-components</P>
+        <P>This page was built using <LinkSpan url='https://github.com/erictu22/erictu22.github.io'>React.js and CSS styled-components</LinkSpan></P>
       </FlexRow>
     </SectionWrapper>
   );

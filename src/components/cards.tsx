@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+import { darkGradient, lightGradient } from "./typography";
 
 export type Theme = "light" | "dark";
 
@@ -30,8 +31,8 @@ const CardWrapper = styled.div<{ theme?: Theme; width?: number }>`
   &:hover {
     background: ${({ theme }) =>
       theme === "light"
-        ? "linear-gradient(to right, #30cfd0 0%, #03fca1 100%)"
-        : "linear-gradient(to right, #336699 0%, #66ccff 100%)"};
+        ? lightGradient
+        : darkGradient};
     cursor: pointer;
     transform: scale(1.02);
   }
