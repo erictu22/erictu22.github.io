@@ -70,17 +70,17 @@ const ExperienceSection = () => {
       <H2>Experience</H2>
       <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
         <FlexRow style={{ marginTop: spacing / 2 }} wrap={isMobileLayout}>
-          <Card theme={cardTheme}>
+          <Card theme={cardTheme} url='https://apps.apple.com/app/id6447978247'>
             <H3 align="start">Convo</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
-              Founder / CTO
+              Founder
             </P>
             <P align="start">
-              Launched a mobile app that lets you practice your favorite second
+              Built and launched a mobile app that lets you practice your favorite second
               language with ChatGPT
             </P>
           </Card>
-          <Card theme={cardTheme}>
+          <Card theme={cardTheme} url='https://www.shortwave.com/'>
             <H3 align="start">Shortwave</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
               Full-Stack Engineer
@@ -92,7 +92,7 @@ const ExperienceSection = () => {
           </Card>
         </FlexRow>
         <FlexRow wrap={isMobileLayout}>
-        <Card theme={cardTheme}>
+        <Card theme={cardTheme} url='https://dminc.com/'>
             <H3 align="start">DMI</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
               Software Engineer
@@ -101,7 +101,7 @@ const ExperienceSection = () => {
               Developed data population scripts for AT&T
             </P>
           </Card>
-          <Card theme={cardTheme}>
+          <Card theme={cardTheme} url='https://www.rtx.com/'>
             <H3 align="start">Raytheon</H3>
             <P align="start" bold style={{ marginTop: 4, marginBottom: 4 }}>
               Software Engineer Intern
@@ -126,13 +126,13 @@ const ProjectSection = () => {
       <H2>Projects</H2>
       <FlexColumn style={{ width: isMobileLayout ? undefined : 700 }}>
         <FlexRow style={{ marginTop: spacing / 2 , overflow: 'auto'}} wrap={isMobileLayout}>
-          <Card theme={cardTheme}>
+          <Card theme={cardTheme} url='https://www.linkedin.com/posts/activity-7062608380481138688-xou1?utm_source=share&utm_medium=member_desktop'>
             <H3 align="start">Automated Video Editor</H3>
             <P align="start">
               a suite of Python scripts that uses image recognition to edit YouTube videos
             </P>
           </Card>
-          <Card theme={cardTheme}>
+          <Card theme={cardTheme} url='https://apps.apple.com/ma/app/pictojump/id1613057956'>
             <H3 align="start">PictoJump</H3>
             <P align="start">
               an iOS mobile game that turns your phone's photo library into a platformer game
@@ -140,7 +140,7 @@ const ProjectSection = () => {
           </Card>
         </FlexRow>
         <FlexRow wrap={isMobileLayout}>
-        <Card theme={cardTheme}>
+        <Card theme={cardTheme} url='https://devpost.com/software/puppet-io'>
             <H3 align="start">Puppet.io</H3>
             <P align="start">
               an image recognition game that won the 2021 MakeHarvard Hack-a-thon
